@@ -31,11 +31,13 @@
 1. 整理固定时间与地点，区分已确认信息和待核实信息。
 2. 从旅行攻略查找候选路线，结合场馆、交通和天气来源核对可执行条件。
 3. 估算往返、景点间移动、排队和缓冲，比较可用游览时间及备选方案。
-4. 默认制作交互式小站，保留勾选和备注；按用户授权和可用服务决定是否在线发布或提供跨设备同步。
+4. 默认使用通用模板制作交互式小站，按实际行程填写已核实的资料。模板在当前浏览器保存勾选和备注；在线发布和跨设备同步需要按用户授权另行配置和验证。
 
 ## 目录
 
 - [Skill 指南](skills/travel-itinerary-planner/SKILL.md)
+- [旅行小站模板](skills/travel-itinerary-planner/assets/trip-site/)
+- [模板配置与交付检查](skills/travel-itinerary-planner/references/trip-site-template.md)
 
 ## 隐私
 
