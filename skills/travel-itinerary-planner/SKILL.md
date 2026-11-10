@@ -34,7 +34,7 @@ For the default trip website, include a packing list and weather context. If edi
 
 ## Default interactive trip website
 
-For a new itinerary, create working mobile-first HTML with a compact home hub and clearly connected sections for the daily itinerary, packing list, food recommendations and trip review. Use the existing project design when editing. Otherwise use a calm travel-journal style: spacious cards, a restrained teal palette, rounded corners, readable Chinese typography, strong information hierarchy and accessible touch controls. Keep the design responsive and printable.
+For a new itinerary, copy and adapt the reusable [trip-site template](references/trip-site-template.md) as the default starting point. Follow its customization and delivery checklist. Do not reuse personal data from prior trips. Create working mobile-first HTML with a compact home hub and clearly connected sections for the daily itinerary, packing list, food recommendations and trip review. Use the existing project design when editing. Otherwise use a calm travel-journal style: spacious cards, a restrained teal palette, rounded corners, readable Chinese typography, strong information hierarchy and accessible touch controls. Keep the design responsive and printable.
 
 Implement these behaviors in the default deliverable:
 
