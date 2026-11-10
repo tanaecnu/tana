@@ -1,11 +1,11 @@
 ---
 name: travel-itinerary-planner
-description: Plan or revise travel itineraries around fixed appointments, transport and personal preferences, using current sources and time-space constraints. Also supports optional packing lists and interactive trip websites.
+description: Plan or revise travel itineraries around fixed appointments, transport and personal preferences, using current sources and time-space constraints. By default, deliver a mobile-friendly interactive trip website with itinerary, maps, packing and review.
 ---
 
 # Travel itinerary planner
 
-Create a usable trip plan from the traveler's real time windows and preferences. Follow the requested output format and scope. Use prior plans as a design reference when supplied, and keep personal trip details out of reusable templates.
+Create a usable trip plan from the traveler's real time windows and preferences. For a new trip-planning request, deliver a responsive interactive trip website by default, alongside a concise summary. Honor an explicit request for another format, a narrower scope, or advice only. For edits to an existing trip, change the requested parts and retain the site and saved data. Keep personal trip details out of reusable templates.
 
 ## Establish constraints
 
@@ -30,11 +30,23 @@ Present routes in chronological order with real dates, precise start and end poi
 
 ## Packing and weather
 
-When requested, inspect existing packing lists and keep user-entered checkmarks and notes. Use a dated forecast for the destination and trip dates, identify its issue time and forecast horizon, acknowledge long-range uncertainty, and point to a live source for a closer check. For trips beyond reliable forecast horizons, use clearly identified seasonal climate information. Translate weather and activities into a concise clothing-layer plan and specific quantities, distinguishing worn items from packed items and avoiding duplicated lists. Include meeting equipment, tickets and identifiers only where relevant; respect travel mode and personal needs.
+For the default trip website, include a packing list and weather context. If editing a list, inspect existing packing lists and keep user-entered checkmarks and notes. Use a dated forecast for the destination and trip dates, identify its issue time and forecast horizon, acknowledge long-range uncertainty, and point to a live source for a closer check. For trips beyond reliable forecast horizons, use clearly identified seasonal climate information. Translate weather and activities into a concise clothing-layer plan and specific quantities, distinguishing worn items from packed items and avoiding duplicated lists. Include meeting equipment, tickets and identifiers only where relevant; respect travel mode and personal needs.
 
-## Interactive website, when requested
+## Default interactive trip website
 
-Preserve the prior site's style and working features. Keep daily routes, confirmed booking details, actionable checklists and food options near the corresponding activities. Useful optional features include editable notes, selected-food-to-itinerary links, an adjustable feasibility comparison, time stamps, satisfaction and retrospective notes. Mark all prefilled inputs and sample values, persist user changes and maintain compatibility with earlier saved data.
+For a new itinerary, create working mobile-first HTML with a compact home hub and clearly connected sections for the daily itinerary, packing list, food recommendations and trip review. Use the existing project design when editing. Otherwise use a calm travel-journal style: spacious cards, a restrained teal palette, rounded corners, readable Chinese typography, strong information hierarchy and accessible touch controls. Keep the design responsive and printable.
+
+Implement these behaviors in the default deliverable:
+
+- Daily navigation shows dates, fixed commitments and chronological route cards. Each transfer displays origin, destination, mode, realistic duration range and a map route when verified. Provide practical alternatives with clear switching conditions and show the relevant option alongside the corresponding time window.
+- Place booking, reservation and guide options next to the relevant activity. Track both desired and completed states, with editable saved details for the booking or contact. Display those details alongside the relevant itinerary step.
+- Provide a weather-informed, categorized packing checklist with quantities, progress and local persistence. Include an editable weather recheck reminder.
+- Recommend relevant food at sensible times with map destinations and allow a selected item and editable time to appear in the corresponding daily itinerary.
+- For constrained time windows, offer an adjustable comparison of alternatives with actual start, departure time, minimum dwell, next destination, deadline and applicable admission times. Clearly indicate estimates, inputs and uncertainties. Recalculate from matching door-to-door route estimates; do not assume an unknown endpoint or invent a fixed deadline.
+- Provide optional daily satisfaction and notes, plus planned-versus-actual travel times when recorded. Show a useful next-step summary when time, location and itinerary inputs are sufficiently known; label schedule assumptions and time zone.
+- Keep user selections, notes and booking information across refreshes. Provide usable local HTML, and distinguish local-only storage from actual hosted synchronization. Retain earlier saved fields and notes when revising an existing site.
+
+Use only relevant features for the trip. Keep inputs editable and optional where information is unknown. Test core navigation, maps, itinerary selection, checklists, persistence and mobile layout; clearly report any unsupported function or verification limit.
 
 Give map directions only with verified endpoints and a documented, appropriate map URL. Distinguish a destination search from a route with both endpoints. State mode and whether durations are estimates or live. If a user changes an endpoint, recalculate with a reliable route service or ask for the matching travel times before showing a comparison.
 
@@ -42,4 +54,4 @@ If cross-device synchronization is requested, use the existing authorized deploy
 
 Publish or modify a hosted site only when authorized by the user's request and applicable access checks. Verify the actual deployment and access behavior. Disclose if an existing local-only plan must be imported, if login or a bearer link is required, and what the link holder can do.
 
-When requested, enable a lightweight retrospective: planned versus actual transfer times, a daily satisfaction score and short notes about what worked or should change. Avoid tying essential itinerary access to ratings or optional feedback.
+Keep ratings and feedback optional; access to the itinerary must not depend on completing them.
